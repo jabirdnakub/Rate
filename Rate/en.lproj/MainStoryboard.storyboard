@@ -1,23 +1,143 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3103" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="ปรับอัตราแลกเปลี่ยน" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AD3-FT-9nk">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="ค่าเงินดอลล่าร์" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4d-Lr-fNJ">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lzb-0G-VGo">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="TKX-rS-EN7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="BRX-Hb-wfL">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="LbP-V4-RiV"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="mySlider:" destination="2" eventType="valueChanged" id="otd-pv-aVH"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DaP-u4-Geg">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d45-PU-Iu9">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="แปลงค่าเงิน">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Mybuttom1:" destination="2" eventType="touchUpInside" id="wYU-Cn-RXo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="ผลการแปลงค่าเงิน" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cum-fw-UjD">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAL-Gn-V50">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XkU-p4-gBz">
+                                <connections>
+                                    <action selector="mySwitch:" destination="2" eventType="valueChanged" id="Fzz-9h-ACC"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="บาท/ดอลล่าร์" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFI-j6-Nja">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sFI-j6-Nja" secondAttribute="trailing" constant="41" id="3Ba-rC-Bfc"/>
+                            <constraint firstItem="AD3-FT-9nk" firstAttribute="top" secondItem="3" secondAttribute="top" constant="28" id="5XM-bz-FrM"/>
+                            <constraint firstItem="cum-fw-UjD" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9nV-mJ-488"/>
+                            <constraint firstItem="BRX-Hb-wfL" firstAttribute="top" secondItem="3" secondAttribute="top" constant="116" id="9pz-9g-zGV"/>
+                            <constraint firstItem="XkU-p4-gBz" firstAttribute="leading" secondItem="AD3-FT-9nk" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="AlV-ut-I8F"/>
+                            <constraint firstItem="XkU-p4-gBz" firstAttribute="leading" secondItem="lzb-0G-VGo" secondAttribute="leading" type="default" id="CfN-Z6-S1J"/>
+                            <constraint firstItem="AD3-FT-9nk" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Fzq-b3-l3M"/>
+                            <constraint firstItem="DaP-u4-Geg" firstAttribute="leading" secondItem="lzb-0G-VGo" secondAttribute="leading" type="default" id="RGM-jx-mno"/>
+                            <constraint firstItem="XkU-p4-gBz" firstAttribute="top" secondItem="AD3-FT-9nk" secondAttribute="top" type="default" id="Tjc-wk-ewP"/>
+                            <constraint firstItem="DaP-u4-Geg" firstAttribute="top" secondItem="BRX-Hb-wfL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Tyl-Uf-MkU"/>
+                            <constraint firstItem="p4d-Lr-fNJ" firstAttribute="top" secondItem="3" secondAttribute="top" constant="72" id="Z9o-rI-8Rh"/>
+                            <constraint firstItem="p4d-Lr-fNJ" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="dhW-Gf-6zY"/>
+                            <constraint firstItem="DaP-u4-Geg" firstAttribute="leading" secondItem="SAL-Gn-V50" secondAttribute="leading" type="default" id="ema-Bz-2Se"/>
+                            <constraint firstItem="cum-fw-UjD" firstAttribute="baseline" secondItem="SAL-Gn-V50" secondAttribute="baseline" type="default" id="glu-IU-WVF"/>
+                            <constraint firstItem="d45-PU-Iu9" firstAttribute="top" secondItem="DaP-u4-Geg" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hqR-Dv-EVJ"/>
+                            <constraint firstAttribute="bottom" secondItem="cum-fw-UjD" secondAttribute="bottom" constant="110" id="plT-Ob-GVH"/>
+                            <constraint firstItem="sFI-j6-Nja" firstAttribute="baseline" secondItem="SAL-Gn-V50" secondAttribute="baseline" type="default" id="uP7-wP-4eT"/>
+                            <constraint firstItem="lzb-0G-VGo" firstAttribute="top" secondItem="p4d-Lr-fNJ" secondAttribute="top" type="default" id="vcx-1t-Ecg"/>
+                            <constraint firstItem="BRX-Hb-wfL" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="w9J-RX-ZI0"/>
+                            <constraint firstItem="d45-PU-Iu9" firstAttribute="centerX" secondItem="DaP-u4-Geg" secondAttribute="centerX" type="default" id="yhP-lp-rnK"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="CA5-uN-As3" appends="YES" id="M4P-WR-EA4"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="myButton" destination="d45-PU-Iu9" id="KHb-AE-SUn"/>
+                        <outlet property="myInput" destination="lzb-0G-VGo" id="7kd-u3-clv"/>
+                        <outlet property="myOutput" destination="SAL-Gn-V50" id="RxE-oB-08r"/>
+                        <outlet property="myRate" destination="DaP-u4-Geg" id="eeO-w7-hCz"/>
+                        <outlet property="mySlider" destination="BRX-Hb-wfL" id="QxK-jC-V2p"/>
+                        <outlet property="mySwitch" destination="XkU-p4-gBz" id="dPf-Hz-YV9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="CA5-uN-As3"/>
             </objects>
+            <point key="canvasLocation" x="-779" y="-129"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="Mybuttom1:"/>
+                <relationship kind="action" name="mySlider:"/>
+                <relationship kind="action" name="mySwitch:"/>
+                <relationship kind="outlet" name="myButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="myInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="myOutput" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="myRate" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mySlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="mySwitch" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

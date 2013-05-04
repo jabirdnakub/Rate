@@ -26,4 +26,20 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)mySlider:(id)sender {
+    _myRate.text = [NSString stringWithFormat:@"%0.2f",_mySlider.value*100];
+}
+
+- (IBAction)mySwitch:(id)sender {
+    if(_mySwitch.on == YES){
+        _mySlider.hidden=NO;
+    }else{
+        _mySlider.hidden=YES;
+        _myRate.text =@"30.00";
+    }
+}
+- (IBAction)Mybuttom1:(id)sender {
+    _myOutput.text = [NSString stringWithFormat:@"%0.2f",_myInput.text.floatValue*_myRate.text.floatValue];
+    [self.view endEditing:YES];
+}
 @end
